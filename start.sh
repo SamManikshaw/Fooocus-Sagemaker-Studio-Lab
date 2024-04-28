@@ -50,6 +50,7 @@ then
     pip install -r requirements_versions.txt
     pip install torch torchvision --force-reinstall --index-url https://download.pytorch.org/whl/cu117
     pip install pyngrok
+    pip install opencv-python-headless
     rm -f /opt/conda/.condarc
     conda install -y conda-forge::glib
     rm -rf ~/.cache/pip

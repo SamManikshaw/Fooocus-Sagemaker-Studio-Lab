@@ -49,8 +49,22 @@ then
     ls
     pip install -r requirements_versions.txt
     pip install torch torchvision --force-reinstall --index-url https://download.pytorch.org/whl/cu117
-    pip install pyngrok
     pip install opencv-python-headless
+    
+    # Install ngrok
+    pip install pyngrok
+    
+    # Install openssh for pinggy
+    #conda config --add channels conda-forge
+    #conda config --set channel_priority strict
+    #conda install openssh -y
+    
+    # Install zrok
+    #mkdir /home/studio-lab-user/zrok
+    #wget https://github.com/openziti/zrok/releases/download/v0.4.23/zrok_0.4.23_linux_amd64.tar.gz -O /home/studio-lab-user/zrok/zrok.tar.gz
+    #tar -xvf /home/studio-lab-user/zrok/zrok.tar.gz -C /home/studio-lab-user/zrok
+    #chmod a+x /home/studio-lab-user/zrok/zrok 
+    
     rm -f /opt/conda/.condarc
     conda install -y conda-forge::glib
     rm -rf ~/.cache/pip
@@ -81,8 +95,8 @@ conda activate fooocus
 cd ..
 if [ $# -eq 0 ]
 then
-  python start-ngrok.py 
+  python start-ngrok-zrok.py 
 elif [ $1 = "reset" ]
 then
-  python start-ngrok.py --reset 
+  python start-ngrok-zrok.py --reset 
 fi

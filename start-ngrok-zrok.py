@@ -213,7 +213,7 @@ def main():
             print('Would you like to enable the environment for Zrok?')
             create_zrok = input("Y/n: ")
             if not (create_zrok.upper() == 'N'):
-                cmd_zrok = f"/home/studio-lab-user/zrok/zrok disable"
+                cmd_zrok = f"/home/studio-lab-user/zrok/zrok disable > /dev/null"
                 subprocess.run(cmd_zrok, shell=True, env=env)
                 get_zrok_token(args, saved_data)
                 cmd_zrok = f"/home/studio-lab-user/zrok/zrok enable {args.token_zrok}"

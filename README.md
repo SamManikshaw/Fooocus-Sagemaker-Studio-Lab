@@ -13,7 +13,7 @@ Tutorial for models and storage manamgement: https://youtu.be/wFtj_JUxfWo
 
 ---
 ### Updates
-15/5/2024: Added support for Pinggy and Zrok -    
+15/5/2024: Added support for Pinggy and Zrok - https://youtu.be/Tl5eHI_AMmw   
 
 ---
 ### Troubleshooting
